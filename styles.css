@@ -1,0 +1,556 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+}
+body {
+  background: #f7f7f7;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  padding: 10px 30px;
+  background: #222;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 7px,
+    rgba(0, 0, 0, 0.8) 9px,
+    rgba(0, 0, 0, 0.8) 13px,
+    transparent 13px
+  );
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  color: black;
+  padding: 20px 30px;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0);
+}
+header a {
+  color: #1b1a55;
+  font-size: 20px;
+  margin-left: 20px;
+}
+header.logo {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #666;
+}
+.logo i {
+  color: red;
+}
+.logo .brand-name {
+  font-weight: bold;
+  font-size: 30px;
+}
+header .navbar a:hover {
+  color: orangered;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.content h2 p {
+  color: black;
+}
+section {
+  padding: 35px 5px;
+}
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url(Images/shape-5.png);
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  padding: 90px 40px;
+}
+
+.content {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 100px;
+  position: relative;
+}
+.image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1 1 40rem;
+  padding-bottom: 280px;
+}
+.image img {
+  width: 870px;
+  height: 1100px;
+  opacity: 0.7;
+  padding: 100px 50px;
+  animation: float 2s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(5px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+}
+
+.content p {
+  color: orange;
+  font-size: 20px;
+}
+button {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid red;
+  color: red;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: red;
+  transition: 0.3s linear;
+  z-index: -1;
+}
+button:hover::before {
+  width: 100%;
+  left: 0;
+}
+button:hover {
+  color: red;
+}
+section {
+  padding: 10px 20px;
+}
+.heading {
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  color: #666;
+}
+.heading span {
+  color: red;
+}
+.speciality .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.speciality .box-container .box {
+  flex: 1 1 30rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border-radius: 10px;
+}
+.speciality .box-container .box .images {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: -100%;
+  left: 0;
+}
+.speciality .box-container .box .chef-content {
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+  gap: 20px;
+}
+.speciality .box-container .box .chef-content img {
+  margin: 20px 0px;
+}
+.chef-content h3 {
+  font-size: 25px;
+  color: darkred;
+  gap: 20px;
+}
+.chef-content p {
+  font-size: 15px;
+  color: #333;
+  padding: 15px 0px;
+  gap: 20px;
+}
+.speciality .box-container .box:hover .images {
+  top: 0;
+}
+.box:hover .chef-content {
+  transform: translateY(100%);
+}
+.Customers {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./Images/lamp.jpg);
+  padding: 100px 50px;
+}
+.customer {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 45px;
+  color: white;
+  font-size: 20px;
+  padding: 30px 100px;
+  border-radius: 10px;
+}
+.customer h1 {
+  color: #ffe8b8;
+  font-size: 30px;
+}
+.main input {
+  border: 2px solid white;
+  border-radius: 5px;
+}
+.customer .main {
+  padding: 10px 20px;
+  gap: 20px;
+}
+.Details {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 190px;
+}
+
+.main {
+  flex: 1 1 50%;
+  margin-right: 10px;
+}
+
+.main label {
+  display: block;
+  margin-bottom: 5px;
+}
+.order {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 45px;
+  color: white;
+  font-size: 25px;
+  padding: 10px 120px;
+  margin-top: 20px;
+}
+.order h1 {
+  color: #ffe8b8;
+  font-size: 30px;
+}
+.order .main {
+  padding: 10px 20px;
+  gap: 20px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  padding: 0px 15px;
+}
+.buttons button {
+  color: black;
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
+.buttons button:active {
+  transform: scale(0.96);
+}
+.overall {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 20px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  border: 10px solid black;
+  background-color: #000000;
+  color: wheat;
+}
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 35px 30px;
+  gap: 45px;
+}
+.Invoice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  color: lightcyan;
+  gap: 15px;
+}
+.Invoice h1 {
+  color: #779933;
+  text-decoration: underline;
+}
+#WithGST {
+  font-size: 35px;
+  color: orangered;
+}
+
+.Amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: lightcyan;
+  gap: 15px;
+}
+.Amount h1 {
+  color: #779933;
+  text-decoration: underline;
+}
+#scroll-top.active {
+  top: calc(100% - 12rem);
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.fade-out {
+  animation: flipOut 1s forwards;
+}
+
+@keyframes flipOut {
+  0% {
+    transform: perspective(400px) rotateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+    display: none;
+  }
+}
+.loader h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 40px;
+  color: transparent;
+  background: linear-gradient(90deg, rgb(123, 91, 199), rgb(234, 56, 141));
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: pulse 2s infinite;
+  text-transform: capitalize;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* paragrah animation */
+:root {
+  --headingSize: 55px;
+}
+
+p {
+  margin: 0;
+  letter-spacing: -1px;
+  font-size: var(--headingSize);
+}
+
+.container {
+  width: 50%;
+}
+
+span {
+  display: inline-block;
+  overflow: hidden;
+  animation: 0.2s swift-up ease-in-out forwards;
+}
+
+i {
+  font-style: normal;
+  position: relative;
+  top: var(--headingSize);
+  animation: 0.2s swift-up ease-in-out forwards;
+}
+
+@keyframes swift-up {
+  to {
+    top: 0;
+  }
+}
+
+/* south indian cuisine animation */
+
+.content {
+  position: relative;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #8338ec;
+}
+
+.content h2:nth-child(2) {
+  color: #c19bf5;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+/* Godavari ruchulu styling*/
+.title h1 {
+  font-size: calc(5px + 5vh);
+  line-height: calc(5px + 5vh);
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+    0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  font-family: "Kanit", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 5s infinite;
+}
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
